@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videotutoria 8: Estructura de un Formulario</title>
+</head>
+<body>
+    <form action="procesar.php" method="GET"> <!-- Método de envío: En este caso será GET (los datos viajan visibles en la URL) -->
+        <fieldset> <!-- Fieldset: Nos permite agrupar un conjunto de inputs para organizar el formulario-->
+            <legend>Datos de Usuario</legend>
+            <p>Usuario: <input type="text" name="usuario"></p>
+            <p>Contraseña: <input type="password" name="contrasena"></p>
+        </fieldset>
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <p>Fecha de Nacimiento <input type="date" name="fecha"></p>
+            <label>Género: </label> <!-- Label: Permite identificar con un texto el significado del input-->
+            <p><input type="radio" name="genero" value="Hombre">Hombre</p> <!-- Input radio: Marcar una opción entre varias -->
+            <p><input type="radio" name="genero" value="Mujer">Mujer</p>
+            <p><input type="radio" name="genero" value="Otro">Otro</p>
+
+            <label for="niveles">Nivel Educativo</label>
+            <select name="niveles" id="niveles"> <!-- Input select: Permite elegir entre varias opciones mediante un formato desplegable -->
+                <option value="ESO">Secundaria</option>
+                <option value="BACH">Bachillerato</option>
+                <option value="FP">Formación Profesional</option>
+                <option value="UNI">Universitario</option>
+            </select>
+            <p>Adjunta tu DNI: <input type="file" name="DNI"></p> <!-- Input file: Para adjuntar un fichero o documento -->    
+        </fieldset>
+        <fieldset>
+            <legend>Política de privacidad</legend>
+            <p><input type="checkbox" name="terminos" value="aceptaTerminos">Acepto los términos de uso</p> <!-- Input checkbox: Permite marcar o desmarcar opciones -->
+            <p><input type="checkbox" name="publicidad" value="aceptaPubli">Acepto recibir publicidad</p>
+        </fieldset>
+        <br>
+        <input type="submit" name="enviar" value="Enviar formulario"> <!-- Input submit: Envía el documento -->
+    </form>
+</body>
+</html>
